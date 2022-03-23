@@ -1,4 +1,5 @@
 import React from "react";
+import "./Card.css";
 
 function Card({ card, handleChoice, matched, disableFlip }) {
   // Function to handle the flipping.

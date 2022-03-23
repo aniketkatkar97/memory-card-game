@@ -1,21 +1,21 @@
 import "./App.css";
-import NavBar from "./components/NavBar";
-import Home from "./components/Home";
-import GameWindow from "./components/GameWindow";
+import NavBar from "./components/nav-bar/NavBar";
+import Home from "./components/home/Home";
+import GameWindow from "./components/game-window/GameWindow";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div>
+    <>
       <Router>
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Home" element={<Home />} />
-          <Route path="/Game" element={<GameWindow />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/game" element={<GameWindow />} />
         </Routes>
       </Router>
-    </div>
+    </>
   );
 }
 

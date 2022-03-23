@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import cardsInfo from "../data/cardsInfo";
-import Card from "./Card";
-import Timer from "./Timer";
+import cardsInfo from "../../const";
+import Card from "../card/Card";
+import Timer from "../timer/Timer";
+import "./GameWindow.css";
 
 function GameWindow() {
   // Defining states
@@ -18,6 +19,12 @@ function GameWindow() {
   }, []);
 
   useEffect(() => {
+    compareCoices();
+    // eslint-disable-next-line
+  }, [choice1, choice2]);
+
+  // Function for comparing two choices
+  const compareCoices = () => {
     if (choice1 && choice2) {
       setDisableFlip(true);
       if (choice1.src === choice2.src) {
@@ -42,7 +49,7 @@ function GameWindow() {
         resetChoices();
       }, 500);
     }
-  }, [choice1, choice2]);
+  };
 
   // Function for shuffling the cards.
   const shuffleCards = () => {

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./Timer.css";
 
 let timer;
 
@@ -25,6 +26,7 @@ function Timer({ matchedCards, gameFinished }) {
         }, 1000);
       }, 500);
     }
+    // eslint-disable-next-line
   }, [matchedCards]);
 
   // Resetting the game.
@@ -40,7 +42,7 @@ function Timer({ matchedCards, gameFinished }) {
   return (
     <>
       <div>Time : {time}</div>
-      <button onClick={resetTime} id="restart-button">
+      <button onClick={resetTime} className="restart-button">
         Restart
       </button>
     </>

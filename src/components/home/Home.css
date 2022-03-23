@@ -1,0 +1,52 @@
+/* Home Component Styling */
+
+.game-info {
+  margin: auto;
+  width: 95%;
+  height: 70%;
+  display: flex;
+}
+
+.game-info img {
+  margin-left: 2em;
+  height: 25em;
+  border: 0.2em rgb(147, 184, 147) solid;
+  border-radius: 1em;
+}
+
+.game-rules {
+  height: 86%;
+  padding: 1em;
+  background-color: rgb(247, 252, 243);
+  border: 0.2em rgb(147, 184, 147) solid;
+  border-radius: 1em;
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(206, 55, 55);
+  text-align: left;
+}
+
+.game-rules p {
+  color: rgb(89, 145, 89);
+  margin: 1em;
+}
+
+.game-rules li {
+  font-weight: bold;
+  margin-left: 1em;
+  margin-top: 1em;
+}
+
+.game-start-btn {
+  margin: 1em;
+  margin-top: 2em;
+  padding: 1em;
+  width: 95%;
+  border: 0.2em rgb(147, 184, 147) solid;
+  border-radius: 1em;
+  color: rgb(48, 160, 48);
+}
+
+.game-start-btn:hover {
+  background-color: rgb(147, 184, 147);
+  color: white;
+}

@@ -1,0 +1,16 @@
+/* Timer Component Styling */
+
+.restart-button {
+  padding: 0.8em;
+  font-size: large;
+  color: white;
+  background-color: rgb(182, 182, 9);
+  border: 0.1em rgb(209, 209, 209) solid;
+  border-radius: 1.5em;
+}
+
+.restart-button:hover {
+  color: white;
+  background-color: rgb(207, 207, 54);
+  cursor: pointer;
+}

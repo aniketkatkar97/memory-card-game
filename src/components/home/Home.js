@@ -1,19 +1,20 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "./Home.css";
 
 function Home() {
   const navigate = useNavigate();
 
   // Function to navigate to the game page.
-  const navToGamePage = () => {
-    navigate("/Game");
+  const handleStartGame = () => {
+    navigate("/game");
   };
 
   return (
     <div className="container">
       <h1>Memory Game</h1>
-      <div id="game-info">
-        <div id="game-rules">
+      <div className="game-info">
+        <div className="game-rules">
           <p>
             Looking for a fun game?? You're in the right place. The Memory
             (Card) Game is made to check how sharp is your memory. The rules are
@@ -34,7 +35,7 @@ function Home() {
         </div>
         <img src="../images/cards.jpg" alt="Game Cards Display" />
       </div>
-      <button id="game-start-btn" onClick={navToGamePage}>
+      <button className="game-start-btn" onClick={handleStartGame}>
         Start Game
       </button>
     </div>

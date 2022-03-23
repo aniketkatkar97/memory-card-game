@@ -1,9 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "./NavBar.css";
 
 function NavBar() {
   return (
-    <div>
+    <>
       <nav>
         <ul className="nav-bar">
           <NavLink
@@ -15,7 +16,7 @@ function NavBar() {
                 };
               }
             }}
-            to="/Home"
+            to="/home"
           >
             Home
           </NavLink>
@@ -28,14 +29,14 @@ function NavBar() {
                 };
               }
             }}
-            to="/Game"
+            to="/game"
           >
             Start Game
           </NavLink>
           <h1>The Memory Card Game</h1>
         </ul>
       </nav>
-    </div>
+    </>
   );
 }
 
