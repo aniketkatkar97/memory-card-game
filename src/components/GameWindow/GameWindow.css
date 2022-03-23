@@ -23,7 +23,7 @@
   height: 80%;
 }
 
-#card-desk {
+.card-desk {
   display: grid;
   padding: auto;
   justify-content: space-around;
@@ -32,7 +32,7 @@
   grid-template-rows: auto auto auto auto auto;
 }
 
-#result-panel {
+.result-panel {
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import cardsInfo from "../../const";
-import Card from "../card/Card";
-import Timer from "../timer/Timer";
+import Card from "../Card/Card";
+import Timer from "../Timer/Timer";
 import "./GameWindow.css";
 
 function GameWindow() {
@@ -20,7 +20,7 @@ function GameWindow() {
 
   useEffect(() => {
     compareCoices();
-    // eslint-disable-next-line
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [choice1, choice2]);
 
   // Function for comparing two choices
@@ -107,7 +107,7 @@ Your Score is ${score}
   return (
     <div className="container game-container">
       <h1 className="game-window-heading">Memory Game</h1>
-      <div className="game-panel" id="card-desk">
+      <div className="game-panel card-desk">
         {cards.map((card, id) => {
           return (
             <Card
@@ -120,7 +120,7 @@ Your Score is ${score}
           );
         })}
       </div>
-      <div className="game-panel" id="result-panel">
+      <div className="game-panel result-panel">
         <div className="result-display">
           <p>Turns : {turnsCount}</p>
           <p>Score : {score}</p>

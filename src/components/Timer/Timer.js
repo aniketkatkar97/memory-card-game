@@ -26,7 +26,7 @@ function Timer({ matchedCards, gameFinished }) {
         }, 1000);
       }, 500);
     }
-    // eslint-disable-next-line
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [matchedCards]);
 
   // Resetting the game.
