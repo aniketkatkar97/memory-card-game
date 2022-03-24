@@ -1,0 +1,42 @@
+/* Navbar Styling */
+
+.nav-bar {
+  background-color: rgb(112, 170, 36);
+  color: rgb(240, 241, 225);
+  font-size: 1.4rem;
+  display: flex;
+  border: 0.1em rgb(112, 170, 36) solid;
+  border-radius: 0.5em;
+  box-shadow: 0.2em 0.2em 0.8em 0em rgb(147, 189, 92);
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.nav-bar h1 {
+  margin: auto;
+  padding: 0.2em 1em 0.2em 1em;
+  font-style: italic;
+  border: 0.05em rgb(112, 170, 36) solid;
+  border-radius: 2em;
+  background-color: rgb(224, 235, 210);
+  color: rgb(112, 170, 36);
+  box-shadow: inset 0 0 0.2em 0 rgb(1, 51, 1);
+}
+
+nav .nav-link-items {
+  padding: 2.6vh 3vw 2.6vh 3vw;
+  text-decoration: none;
+  border: 0.1em rgb(112, 170, 36) solid;
+  border-radius: 0.5em;
+  color: rgb(240, 241, 225);
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+nav .nav-link-items:hover {
+  background-color: rgb(152, 207, 75);
+  border: 0.1em rgb(142, 204, 56) solid;
+  color: rgb(0, 150, 0);
+  border-radius: 0.5em;
+  cursor: pointer;
+}

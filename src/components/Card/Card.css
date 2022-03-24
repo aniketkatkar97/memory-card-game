@@ -1,0 +1,17 @@
+.card {
+  width: 80%;
+  border: 0.2em rgb(182, 182, 9) solid;
+  border-radius: 1em;
+}
+
+.front {
+  display: none;
+}
+
+.matched .front {
+  display: inline-block;
+}
+
+.matched .back {
+  display: none;
+}
