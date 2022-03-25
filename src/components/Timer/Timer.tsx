@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./Timer.css";
 
-let timer;
+let timer: ReturnType<typeof setInterval>;
+type TimerProps = {
+  matchedCards: number,
+  gameFinished: (time: number, resetClick: boolean) => void
+}
 
-function Timer({ matchedCards, gameFinished }) {
+function Timer({ matchedCards, gameFinished }: TimerProps) {
   const [time, setTime] = useState(0);
 
   useEffect(() => {
