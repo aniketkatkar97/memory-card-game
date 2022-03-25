@@ -2,6 +2,18 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
+let activeStyling = ({ isActive }: {isActive: boolean}): React.CSSProperties => {
+  if (isActive) {
+    return {
+      backgroundColor: "rgb(122, 200, 85)",
+    };
+  } else {
+    return {
+      backgroundColor: "rgb(112, 170, 36)"
+    }
+  }
+}
+
 function NavBar() {
   return (
     <>
@@ -9,26 +21,14 @@ function NavBar() {
         <ul className="nav-bar">
           <NavLink
             className="nav-link-items"
-            style={({ isActive }) => {
-              if (isActive) {
-                return {
-                  backgroundColor: "rgb(122, 200, 85)",
-                };
-              }
-            }}
+            style={activeStyling}
             to="/home"
           >
             Home
           </NavLink>
           <NavLink
             className="nav-link-items"
-            style={({ isActive }) => {
-              if (isActive) {
-                return {
-                  backgroundColor: "rgb(122, 200, 85)",
-                };
-              }
-            }}
+            style={activeStyling}
             to="/game"
           >
             Start Game

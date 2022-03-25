@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
-import cardsInfo from "../../const";
+import {cardsInfo} from "../../const";
 import Card from "../Card/Card";
 import Timer from "../Timer/Timer";
 import "./GameWindow.css";
+import { TypeOfCards } from "../../const";
 
 function GameWindow() {
   // Defining states
-  const [cards, setCards] = useState([]); // Cards List.
-  const [choice1, setChoice1] = useState(null);
-  const [choice2, setChoice2] = useState(null);
+  const [cards, setCards] = useState<TypeOfCards[]>([]); // Cards List.
+  const [choice1, setChoice1] = useState<TypeOfCards | null>(null);
+  const [choice2, setChoice2] = useState<TypeOfCards | null>(null);
   const [turnsCount, setTurnsCount] = useState(0); // No. of turns.
   const [score, setScore] = useState(0); // Game score.
   const [matchedCards, setMatchedCards] = useState(0); // State to keep track of matched pairs.
@@ -25,7 +26,7 @@ function GameWindow() {
 
   // Function for comparing two choices
   const compareCoices = () => {
-    if (choice1 && choice2) {
+    if (choice1  && choice2 ) {
       setDisableFlip(true);
       if (choice1.src === choice2.src) {
         setScore((prevScore) => prevScore + 5);
@@ -63,7 +64,7 @@ function GameWindow() {
   };
 
   // Changing state after cards clicked.
-  const handleChoice = (selectedCard) => {
+  const handleChoice = (selectedCard: TypeOfCards) => {
     if (choice1 === null) {
       setChoice1(selectedCard);
     } else {
@@ -89,7 +90,7 @@ function GameWindow() {
   };
 
   // Showing the results of the game and resetting the states.
-  const gameFinished = (time, resetClick) => {
+  const gameFinished = (time: number, resetClick: boolean) => {
     if (resetClick) {
       alert(`Congratulations!!
 You completed the game in ${turnsCount + 1} turns in ${time} seconds.

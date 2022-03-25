@@ -1,4 +1,10 @@
-const cardsInfo = [
+export type TypeOfCards = {
+  src: string,
+  alt: string,
+  paired: boolean,
+  id?: number
+}
+export const cardsInfo: TypeOfCards[] = [
   {
     src: "/images/card-1.jpg",
     alt: "card-1",
@@ -50,5 +56,3 @@ const cardsInfo = [
     paired: false,
   },
 ];
-
-export default cardsInfo;
